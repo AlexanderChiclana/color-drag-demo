@@ -1,7 +1,17 @@
 import React, { Component } from 'react'
 import { useDrag } from 'react-dnd'
 import { ItemTypes } from './items.js'
-import { usePreview } from 'react-dnd-preview'
+// import { usePreview } from 'react-dnd-preview'
+import { usePreview, Preview } from 'react-dnd-multi-backend'
+
+// const MyPreview = () => {
+//   const { display, itemType, item, style } = usePreview()
+//   if (!display) {
+//     return null
+//   }
+//   // render your preview
+//   return <div>X</div>
+// }
 
 const MyPreview = () => {
   const { display, itemType, item, style } = usePreview()
@@ -49,6 +59,9 @@ const Ball = props => {
       }}
     >
       {/* <MyPreview /> */}
+      {/* <Preview> */}
+        <MyPreview />
+      {/* </Preview> */}
     </div>
   )
 }
